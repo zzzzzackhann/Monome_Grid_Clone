@@ -1,0 +1,4 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "ISP_programmer-eagle-import") (type "KiCad") (uri "${KIPRJMOD}/ISP_programmer-eagle-import.kicad_sym") (options "") (descr ""))
+)

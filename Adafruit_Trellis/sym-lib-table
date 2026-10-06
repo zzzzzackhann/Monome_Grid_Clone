@@ -1,0 +1,4 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "Adafruit_Trellis-eagle-import") (type "KiCad") (uri "${KIPRJMOD}/Adafruit_Trellis-eagle-import.kicad_sym") (options "") (descr ""))
+)

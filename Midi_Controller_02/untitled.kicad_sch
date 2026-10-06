@@ -1,0 +1,4117 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "db1b94c9-c54e-4700-8ebf-d29f891c2b41")
+	(paper "A3")
+	(lib_symbols
+		(symbol "Switch:SW_Push"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "SW"
+				(at 1.27 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "SW_Push"
+				(at 0 -1.524 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Push button switch, generic, two pins"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "switch normally-open pushbutton push-button"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "SW_Push_0_1"
+				(circle
+					(center -2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.27) (xy 0 3.048)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 1.27) (xy -2.54 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:GND"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(wire
+		(pts
+			(xy 311.15 64.77) (xy 311.15 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "07c53a45-42f8-4c82-ab49-c03faa900018")
+	)
+	(wire
+		(pts
+			(xy 259.08 64.77) (xy 259.08 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1674d37b-0a6d-488d-b936-c672af31a63d")
+	)
+	(wire
+		(pts
+			(xy 190.5 64.77) (xy 190.5 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1ac0611b-868b-497b-b1a5-9fea7e623aa4")
+	)
+	(wire
+		(pts
+			(xy 172.72 64.77) (xy 172.72 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "22d6f569-0fe4-4052-a98d-53376d966115")
+	)
+	(wire
+		(pts
+			(xy 138.43 64.77) (xy 138.43 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2fff1cb7-c871-419d-a38b-7c79d6d61d11")
+	)
+	(wire
+		(pts
+			(xy 156.21 64.77) (xy 156.21 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "47e766de-1f51-43b6-8c87-bf65029d01c2")
+	)
+	(wire
+		(pts
+			(xy 213.36 63.5) (xy 214.63 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4dc2f2cb-1d12-4960-bcde-875e726e70bb")
+	)
+	(wire
+		(pts
+			(xy 121.92 64.77) (xy 121.92 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "64eb0885-faf8-4f49-978a-415f763b6606")
+	)
+	(wire
+		(pts
+			(xy 179.07 63.5) (xy 180.34 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "66ced5b5-c9cb-4acb-a285-5a7784f16eb2")
+	)
+	(wire
+		(pts
+			(xy 87.63 63.5) (xy 87.63 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6837866a-d054-419f-a661-f60a0ae62658")
+	)
+	(wire
+		(pts
+			(xy 104.14 63.5) (xy 104.14 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "746d8f63-e4d4-4d4b-bfcb-52173904b42d")
+	)
+	(wire
+		(pts
+			(xy 330.2 64.77) (xy 330.2 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "77e0da78-9966-45c4-b56c-b6f35ada8cac")
+	)
+	(wire
+		(pts
+			(xy 144.78 63.5) (xy 146.05 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7c8fbb9c-d141-4142-ad98-7a6f88703da1")
+	)
+	(wire
+		(pts
+			(xy 318.77 63.5) (xy 320.04 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "809edecf-5460-483a-8df4-810c70ea261e")
+	)
+	(wire
+		(pts
+			(xy 293.37 64.77) (xy 293.37 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "89002189-33a6-48f3-95af-370bb806b7a2")
+	)
+	(wire
+		(pts
+			(xy 224.79 64.77) (xy 224.79 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "94deb820-a890-4634-97ed-bee8182f0db8")
+	)
+	(wire
+		(pts
+			(xy 281.94 63.5) (xy 283.21 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bdf2042e-8d65-49ad-b87c-8dadd19d6e29")
+	)
+	(wire
+		(pts
+			(xy 241.3 64.77) (xy 241.3 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d76eff7e-c743-4773-a2ca-7dc86a4c87a9")
+	)
+	(wire
+		(pts
+			(xy 347.98 64.77) (xy 347.98 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e9b5d889-ad95-4e61-87be-18efe2662c63")
+	)
+	(wire
+		(pts
+			(xy 247.65 63.5) (xy 248.92 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f5a65b6d-735e-4c0a-8b28-a8486e1f0bd9")
+	)
+	(wire
+		(pts
+			(xy 275.59 64.77) (xy 275.59 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f9edbd24-fcb9-4f92-ae6a-45f3eeb65390")
+	)
+	(wire
+		(pts
+			(xy 207.01 64.77) (xy 207.01 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fb0fe281-9bc8-4d89-975a-0159ddfb65fa")
+	)
+	(wire
+		(pts
+			(xy 110.49 63.5) (xy 111.76 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ffaf1542-5b16-4a72-8ca8-fcc221ecaa34")
+	)
+	(hierarchical_label "SW12"
+		(shape input)
+		(at 281.94 63.5 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "14c3da6d-8a1f-4fe7-89c5-210ff934df49")
+	)
+	(hierarchical_label "SW4"
+		(shape input)
+		(at 144.78 63.5 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "1f90cf89-e91a-4408-97c3-1cfb100d89dc")
+	)
+	(hierarchical_label "SW11"
+		(shape input)
+		(at 265.43 63.5 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "39dba45d-e413-4df9-b84d-dd2de00b54b4")
+	)
+	(hierarchical_label "SW1"
+		(shape input)
+		(at 93.98 62.23 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "3c31138d-1e84-450d-9b49-b6bb2014e279")
+	)
+	(hierarchical_label "SW10"
+		(shape input)
+		(at 247.65 63.5 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "5f884bdf-6bf5-4a2f-937f-04e0a8914477")
+	)
+	(hierarchical_label "SW5"
+		(shape input)
+		(at 162.56 63.5 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "6cb69a99-94d1-477f-919b-cde6378e89ac")
+	)
+	(hierarchical_label "SW9"
+		(shape input)
+		(at 231.14 63.5 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "75af3a28-c6bf-4730-a3cc-4c29be713af4")
+	)
+	(hierarchical_label "SW7"
+		(shape input)
+		(at 196.85 63.5 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "75bd3197-ac3b-4839-8512-5ca15bc4167b")
+	)
+	(hierarchical_label "SW6"
+		(shape input)
+		(at 179.07 63.5 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "7bb1eb4e-1873-4014-b970-1d7b616639b6")
+	)
+	(hierarchical_label "SW8"
+		(shape input)
+		(at 213.36 63.5 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "7d6517a6-eafb-491b-a982-556ad6e60af8")
+	)
+	(hierarchical_label "SW14"
+		(shape input)
+		(at 318.77 63.5 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "8aafc780-e40e-465e-8e43-e3159889fff4")
+	)
+	(hierarchical_label "SW3"
+		(shape input)
+		(at 128.27 63.5 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "8dfd762d-d967-4501-b09f-e92cf4364869")
+	)
+	(hierarchical_label "SW2"
+		(shape input)
+		(at 110.49 63.5 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "956e4e1b-36fc-4380-bb1d-af57d460974f")
+	)
+	(hierarchical_label "SW15"
+		(shape input)
+		(at 337.82 63.5 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "af1d4ab1-1230-41fd-90f5-df472a05c349")
+	)
+	(hierarchical_label "SW13"
+		(shape input)
+		(at 300.99 63.5 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e78500f6-e470-42cd-8a2e-9577d22dc319")
+	)
+	(hierarchical_label "SW0"
+		(shape input)
+		(at 77.47 62.23 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "fc6b4f0a-f136-46a8-9566-63c6b5c4db9c")
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 254 63.5 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "01619b59-2516-4aaa-930b-ded41b3dedad")
+		(property "Reference" "SW187"
+			(at 254 55.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 254 58.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 254 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 254 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 254 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "6da78801-11d5-426f-965c-54a96023d485")
+		)
+		(pin "1"
+			(uuid "c196cd52-5a93-4b04-a120-917991aa81b6")
+		)
+		(instances
+			(project "Midi_Controller_02"
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/1514501c-94c5-4d71-b612-dff59add0375"
+					(reference "SW251")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/3d540c68-eeb5-4b73-a0fa-2849d9da59f4"
+					(reference "SW235")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/7da63472-84e3-4c20-8da6-3ec9d357f47e"
+					(reference "SW155")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ae5b0fab-6902-4988-81d7-616edb40a1ac"
+					(reference "SW219")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/b50dbabf-9223-4383-8d4b-087ad146e2a2"
+					(reference "SW139")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/c11c5449-1192-4cf4-8b23-bd997502bfa7"
+					(reference "SW203")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ce659e6f-eb21-41a4-985e-768b6ecc0e23"
+					(reference "SW187")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/f291ef2d-c884-45c2-9a1d-801ef9814311"
+					(reference "SW171")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 99.06 62.23 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "01cc7721-f70c-4a13-9a06-78b40e6f7f8f")
+		(property "Reference" "SW178"
+			(at 99.06 54.61 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 99.06 57.15 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 99.06 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 99.06 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 99.06 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "9ce33f82-e9a2-45bb-89ca-62417ea26c83")
+		)
+		(pin "1"
+			(uuid "7889d95c-cbbf-4f9f-a398-bcfd6e80782f")
+		)
+		(instances
+			(project "Midi_Controller_02"
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/1514501c-94c5-4d71-b612-dff59add0375"
+					(reference "SW242")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/3d540c68-eeb5-4b73-a0fa-2849d9da59f4"
+					(reference "SW226")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/7da63472-84e3-4c20-8da6-3ec9d357f47e"
+					(reference "SW146")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ae5b0fab-6902-4988-81d7-616edb40a1ac"
+					(reference "SW210")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/b50dbabf-9223-4383-8d4b-087ad146e2a2"
+					(reference "SW130")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/c11c5449-1192-4cf4-8b23-bd997502bfa7"
+					(reference "SW194")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ce659e6f-eb21-41a4-985e-768b6ecc0e23"
+					(reference "SW178")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/f291ef2d-c884-45c2-9a1d-801ef9814311"
+					(reference "SW162")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 275.59 64.77 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0988d4df-c152-4169-aaa8-a086a0f13926")
+		(property "Reference" "#PWR0188"
+			(at 275.59 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 275.59 69.85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 275.59 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 275.59 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 275.59 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5374d10c-dd83-4103-b26c-139ce565d4c0")
+		)
+		(instances
+			(project "Midi_Controller_02"
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/1514501c-94c5-4d71-b612-dff59add0375"
+					(reference "#PWR0252")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/3d540c68-eeb5-4b73-a0fa-2849d9da59f4"
+					(reference "#PWR0236")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/7da63472-84e3-4c20-8da6-3ec9d357f47e"
+					(reference "#PWR0156")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ae5b0fab-6902-4988-81d7-616edb40a1ac"
+					(reference "#PWR0220")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/b50dbabf-9223-4383-8d4b-087ad146e2a2"
+					(reference "#PWR0140")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/c11c5449-1192-4cf4-8b23-bd997502bfa7"
+					(reference "#PWR0204")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ce659e6f-eb21-41a4-985e-768b6ecc0e23"
+					(reference "#PWR0188")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/f291ef2d-c884-45c2-9a1d-801ef9814311"
+					(reference "#PWR0172")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 306.07 63.5 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0bc1d10b-0e78-44de-bb9c-e71ad3d0a7d4")
+		(property "Reference" "SW190"
+			(at 306.07 55.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 306.07 58.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 306.07 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 306.07 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 306.07 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "c9228a25-3314-4c7c-9274-6c6485ebb008")
+		)
+		(pin "1"
+			(uuid "e49cc401-f106-4abd-a33b-7569d52a21a0")
+		)
+		(instances
+			(project "Midi_Controller_02"
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/1514501c-94c5-4d71-b612-dff59add0375"
+					(reference "SW254")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/3d540c68-eeb5-4b73-a0fa-2849d9da59f4"
+					(reference "SW238")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/7da63472-84e3-4c20-8da6-3ec9d357f47e"
+					(reference "SW158")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ae5b0fab-6902-4988-81d7-616edb40a1ac"
+					(reference "SW222")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/b50dbabf-9223-4383-8d4b-087ad146e2a2"
+					(reference "SW142")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/c11c5449-1192-4cf4-8b23-bd997502bfa7"
+					(reference "SW206")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ce659e6f-eb21-41a4-985e-768b6ecc0e23"
+					(reference "SW190")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/f291ef2d-c884-45c2-9a1d-801ef9814311"
+					(reference "SW174")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 241.3 64.77 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2687f13f-6120-43e9-ad5d-813e2e0abc5d")
+		(property "Reference" "#PWR0186"
+			(at 241.3 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 241.3 69.85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 241.3 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 241.3 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 241.3 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b42550b6-836e-4eff-a242-e0c199d788f3")
+		)
+		(instances
+			(project "Midi_Controller_02"
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/1514501c-94c5-4d71-b612-dff59add0375"
+					(reference "#PWR0250")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/3d540c68-eeb5-4b73-a0fa-2849d9da59f4"
+					(reference "#PWR0234")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/7da63472-84e3-4c20-8da6-3ec9d357f47e"
+					(reference "#PWR0154")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ae5b0fab-6902-4988-81d7-616edb40a1ac"
+					(reference "#PWR0218")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/b50dbabf-9223-4383-8d4b-087ad146e2a2"
+					(reference "#PWR0138")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/c11c5449-1192-4cf4-8b23-bd997502bfa7"
+					(reference "#PWR0202")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ce659e6f-eb21-41a4-985e-768b6ecc0e23"
+					(reference "#PWR0186")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/f291ef2d-c884-45c2-9a1d-801ef9814311"
+					(reference "#PWR0170")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 311.15 64.77 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "289b734d-9dd3-42f5-a025-2d50b7e53db0")
+		(property "Reference" "#PWR0190"
+			(at 311.15 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 311.15 69.85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 311.15 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 311.15 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 311.15 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "182cb0ea-95e7-4c8c-8d5b-9f8494de6a49")
+		)
+		(instances
+			(project "Midi_Controller_02"
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/1514501c-94c5-4d71-b612-dff59add0375"
+					(reference "#PWR0254")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/3d540c68-eeb5-4b73-a0fa-2849d9da59f4"
+					(reference "#PWR0238")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/7da63472-84e3-4c20-8da6-3ec9d357f47e"
+					(reference "#PWR0158")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ae5b0fab-6902-4988-81d7-616edb40a1ac"
+					(reference "#PWR0222")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/b50dbabf-9223-4383-8d4b-087ad146e2a2"
+					(reference "#PWR0142")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/c11c5449-1192-4cf4-8b23-bd997502bfa7"
+					(reference "#PWR0206")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ce659e6f-eb21-41a4-985e-768b6ecc0e23"
+					(reference "#PWR0190")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/f291ef2d-c884-45c2-9a1d-801ef9814311"
+					(reference "#PWR0174")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 270.51 63.5 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "33fa8f45-508d-458f-b168-4faac9edf002")
+		(property "Reference" "SW188"
+			(at 270.51 55.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 270.51 58.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 270.51 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 270.51 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 270.51 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "e25144e6-aaa5-49eb-b3fd-b29afc25d230")
+		)
+		(pin "1"
+			(uuid "ca9b3ecb-a102-40ab-8de7-ce5a2b7ef055")
+		)
+		(instances
+			(project "Midi_Controller_02"
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/1514501c-94c5-4d71-b612-dff59add0375"
+					(reference "SW252")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/3d540c68-eeb5-4b73-a0fa-2849d9da59f4"
+					(reference "SW236")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/7da63472-84e3-4c20-8da6-3ec9d357f47e"
+					(reference "SW156")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ae5b0fab-6902-4988-81d7-616edb40a1ac"
+					(reference "SW220")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/b50dbabf-9223-4383-8d4b-087ad146e2a2"
+					(reference "SW140")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/c11c5449-1192-4cf4-8b23-bd997502bfa7"
+					(reference "SW204")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ce659e6f-eb21-41a4-985e-768b6ecc0e23"
+					(reference "SW188")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/f291ef2d-c884-45c2-9a1d-801ef9814311"
+					(reference "SW172")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 288.29 63.5 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3c60a72a-9602-4b7f-9a20-d7e314a2d297")
+		(property "Reference" "SW189"
+			(at 288.29 55.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 288.29 58.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 288.29 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 288.29 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 288.29 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "5d4db582-fa31-43a2-b0d8-1359537933ed")
+		)
+		(pin "1"
+			(uuid "b38a38a4-8012-4cc1-9793-ac22104d7389")
+		)
+		(instances
+			(project "Midi_Controller_02"
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/1514501c-94c5-4d71-b612-dff59add0375"
+					(reference "SW253")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/3d540c68-eeb5-4b73-a0fa-2849d9da59f4"
+					(reference "SW237")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/7da63472-84e3-4c20-8da6-3ec9d357f47e"
+					(reference "SW157")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ae5b0fab-6902-4988-81d7-616edb40a1ac"
+					(reference "SW221")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/b50dbabf-9223-4383-8d4b-087ad146e2a2"
+					(reference "SW141")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/c11c5449-1192-4cf4-8b23-bd997502bfa7"
+					(reference "SW205")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ce659e6f-eb21-41a4-985e-768b6ecc0e23"
+					(reference "SW189")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/f291ef2d-c884-45c2-9a1d-801ef9814311"
+					(reference "SW173")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 172.72 64.77 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3edaf66a-5b45-450a-af0c-01ecc2036eba")
+		(property "Reference" "#PWR0182"
+			(at 172.72 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 172.72 69.85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 172.72 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 172.72 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 172.72 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "dd7c16d0-1cd8-47cf-8ca6-84228066a5c7")
+		)
+		(instances
+			(project "Midi_Controller_02"
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/1514501c-94c5-4d71-b612-dff59add0375"
+					(reference "#PWR0246")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/3d540c68-eeb5-4b73-a0fa-2849d9da59f4"
+					(reference "#PWR0230")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/7da63472-84e3-4c20-8da6-3ec9d357f47e"
+					(reference "#PWR0150")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ae5b0fab-6902-4988-81d7-616edb40a1ac"
+					(reference "#PWR0214")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/b50dbabf-9223-4383-8d4b-087ad146e2a2"
+					(reference "#PWR0134")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/c11c5449-1192-4cf4-8b23-bd997502bfa7"
+					(reference "#PWR0198")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ce659e6f-eb21-41a4-985e-768b6ecc0e23"
+					(reference "#PWR0182")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/f291ef2d-c884-45c2-9a1d-801ef9814311"
+					(reference "#PWR0166")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 207.01 64.77 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "41304ee6-703b-4eae-9dfd-9d6ea6453149")
+		(property "Reference" "#PWR0184"
+			(at 207.01 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 207.01 69.85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 207.01 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 207.01 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 207.01 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0e6e0857-1fdf-4fd8-9ec6-58e6fddf7b11")
+		)
+		(instances
+			(project "Midi_Controller_02"
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/1514501c-94c5-4d71-b612-dff59add0375"
+					(reference "#PWR0248")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/3d540c68-eeb5-4b73-a0fa-2849d9da59f4"
+					(reference "#PWR0232")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/7da63472-84e3-4c20-8da6-3ec9d357f47e"
+					(reference "#PWR0152")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ae5b0fab-6902-4988-81d7-616edb40a1ac"
+					(reference "#PWR0216")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/b50dbabf-9223-4383-8d4b-087ad146e2a2"
+					(reference "#PWR0136")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/c11c5449-1192-4cf4-8b23-bd997502bfa7"
+					(reference "#PWR0200")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ce659e6f-eb21-41a4-985e-768b6ecc0e23"
+					(reference "#PWR0184")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/f291ef2d-c884-45c2-9a1d-801ef9814311"
+					(reference "#PWR0168")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 325.12 63.5 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "45a5fe2f-629c-488c-8bc4-ed79a312316f")
+		(property "Reference" "SW191"
+			(at 325.12 55.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 325.12 58.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 325.12 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 325.12 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 325.12 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "a920dc98-299b-4d94-8bae-705d68391aa3")
+		)
+		(pin "1"
+			(uuid "4f33133e-f593-4d68-8fe6-015cd86a241e")
+		)
+		(instances
+			(project "Midi_Controller_02"
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/1514501c-94c5-4d71-b612-dff59add0375"
+					(reference "SW255")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/3d540c68-eeb5-4b73-a0fa-2849d9da59f4"
+					(reference "SW239")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/7da63472-84e3-4c20-8da6-3ec9d357f47e"
+					(reference "SW159")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ae5b0fab-6902-4988-81d7-616edb40a1ac"
+					(reference "SW223")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/b50dbabf-9223-4383-8d4b-087ad146e2a2"
+					(reference "SW143")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/c11c5449-1192-4cf4-8b23-bd997502bfa7"
+					(reference "SW207")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ce659e6f-eb21-41a4-985e-768b6ecc0e23"
+					(reference "SW191")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/f291ef2d-c884-45c2-9a1d-801ef9814311"
+					(reference "SW175")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 138.43 64.77 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4d461fed-5758-4048-bec2-497b08f455b7")
+		(property "Reference" "#PWR0180"
+			(at 138.43 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 138.43 69.85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 138.43 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 138.43 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 138.43 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0354af72-9c59-4dff-947f-a91c1239d8a2")
+		)
+		(instances
+			(project "Midi_Controller_02"
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/1514501c-94c5-4d71-b612-dff59add0375"
+					(reference "#PWR0244")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/3d540c68-eeb5-4b73-a0fa-2849d9da59f4"
+					(reference "#PWR0228")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/7da63472-84e3-4c20-8da6-3ec9d357f47e"
+					(reference "#PWR0148")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ae5b0fab-6902-4988-81d7-616edb40a1ac"
+					(reference "#PWR0212")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/b50dbabf-9223-4383-8d4b-087ad146e2a2"
+					(reference "#PWR0132")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/c11c5449-1192-4cf4-8b23-bd997502bfa7"
+					(reference "#PWR0196")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ce659e6f-eb21-41a4-985e-768b6ecc0e23"
+					(reference "#PWR0180")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/f291ef2d-c884-45c2-9a1d-801ef9814311"
+					(reference "#PWR0164")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 219.71 63.5 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4f34ef5f-d3e8-4d30-a7db-881d644c6e5b")
+		(property "Reference" "SW185"
+			(at 219.71 55.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 219.71 58.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 219.71 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 219.71 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 219.71 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "d2915b9a-8832-4bd6-aa48-0fb91d403a3d")
+		)
+		(pin "1"
+			(uuid "ed153b64-b207-44da-9163-3d7ce95fdddf")
+		)
+		(instances
+			(project "Midi_Controller_02"
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/1514501c-94c5-4d71-b612-dff59add0375"
+					(reference "SW249")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/3d540c68-eeb5-4b73-a0fa-2849d9da59f4"
+					(reference "SW233")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/7da63472-84e3-4c20-8da6-3ec9d357f47e"
+					(reference "SW153")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ae5b0fab-6902-4988-81d7-616edb40a1ac"
+					(reference "SW217")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/b50dbabf-9223-4383-8d4b-087ad146e2a2"
+					(reference "SW137")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/c11c5449-1192-4cf4-8b23-bd997502bfa7"
+					(reference "SW201")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ce659e6f-eb21-41a4-985e-768b6ecc0e23"
+					(reference "SW185")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/f291ef2d-c884-45c2-9a1d-801ef9814311"
+					(reference "SW169")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 185.42 63.5 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "510a1420-5c78-4e55-bf2a-d5c563c4ff9c")
+		(property "Reference" "SW183"
+			(at 185.42 55.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 185.42 58.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 185.42 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 185.42 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 185.42 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "4cd6b6ee-6e23-45f2-8dfa-5c8ba3916e70")
+		)
+		(pin "1"
+			(uuid "917436b6-208e-4117-aa04-6ccdf0c1d2fe")
+		)
+		(instances
+			(project "Midi_Controller_02"
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/1514501c-94c5-4d71-b612-dff59add0375"
+					(reference "SW247")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/3d540c68-eeb5-4b73-a0fa-2849d9da59f4"
+					(reference "SW231")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/7da63472-84e3-4c20-8da6-3ec9d357f47e"
+					(reference "SW151")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ae5b0fab-6902-4988-81d7-616edb40a1ac"
+					(reference "SW215")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/b50dbabf-9223-4383-8d4b-087ad146e2a2"
+					(reference "SW135")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/c11c5449-1192-4cf4-8b23-bd997502bfa7"
+					(reference "SW199")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ce659e6f-eb21-41a4-985e-768b6ecc0e23"
+					(reference "SW183")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/f291ef2d-c884-45c2-9a1d-801ef9814311"
+					(reference "SW167")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 293.37 64.77 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5c59fa0b-d58d-4ed3-bc8d-769d8e45906e")
+		(property "Reference" "#PWR0189"
+			(at 293.37 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 293.37 69.85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 293.37 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 293.37 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 293.37 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "19cb837a-5ab0-4ea3-b41c-25535a848f9d")
+		)
+		(instances
+			(project "Midi_Controller_02"
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/1514501c-94c5-4d71-b612-dff59add0375"
+					(reference "#PWR0253")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/3d540c68-eeb5-4b73-a0fa-2849d9da59f4"
+					(reference "#PWR0237")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/7da63472-84e3-4c20-8da6-3ec9d357f47e"
+					(reference "#PWR0157")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ae5b0fab-6902-4988-81d7-616edb40a1ac"
+					(reference "#PWR0221")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/b50dbabf-9223-4383-8d4b-087ad146e2a2"
+					(reference "#PWR0141")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/c11c5449-1192-4cf4-8b23-bd997502bfa7"
+					(reference "#PWR0205")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ce659e6f-eb21-41a4-985e-768b6ecc0e23"
+					(reference "#PWR0189")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/f291ef2d-c884-45c2-9a1d-801ef9814311"
+					(reference "#PWR0173")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 342.9 63.5 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "62403fb9-0203-493e-b7be-410cee716918")
+		(property "Reference" "SW192"
+			(at 342.9 55.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 342.9 58.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 342.9 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 342.9 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 342.9 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "ed6029f4-e2dc-4abf-b97c-4fd010919491")
+		)
+		(pin "1"
+			(uuid "5cada3c5-d8e8-4dca-ac1d-816eeebf980f")
+		)
+		(instances
+			(project "Midi_Controller_02"
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/1514501c-94c5-4d71-b612-dff59add0375"
+					(reference "SW256")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/3d540c68-eeb5-4b73-a0fa-2849d9da59f4"
+					(reference "SW240")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/7da63472-84e3-4c20-8da6-3ec9d357f47e"
+					(reference "SW160")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ae5b0fab-6902-4988-81d7-616edb40a1ac"
+					(reference "SW224")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/b50dbabf-9223-4383-8d4b-087ad146e2a2"
+					(reference "SW144")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/c11c5449-1192-4cf4-8b23-bd997502bfa7"
+					(reference "SW208")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ce659e6f-eb21-41a4-985e-768b6ecc0e23"
+					(reference "SW192")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/f291ef2d-c884-45c2-9a1d-801ef9814311"
+					(reference "SW176")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 259.08 64.77 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "641325cc-fdb7-49d0-b3ad-1ab2151d30f4")
+		(property "Reference" "#PWR0187"
+			(at 259.08 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 259.08 69.85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 259.08 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 259.08 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 259.08 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9dbc8242-8b77-4d55-a78a-781831c6de00")
+		)
+		(instances
+			(project "Midi_Controller_02"
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/1514501c-94c5-4d71-b612-dff59add0375"
+					(reference "#PWR0251")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/3d540c68-eeb5-4b73-a0fa-2849d9da59f4"
+					(reference "#PWR0235")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/7da63472-84e3-4c20-8da6-3ec9d357f47e"
+					(reference "#PWR0155")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ae5b0fab-6902-4988-81d7-616edb40a1ac"
+					(reference "#PWR0219")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/b50dbabf-9223-4383-8d4b-087ad146e2a2"
+					(reference "#PWR0139")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/c11c5449-1192-4cf4-8b23-bd997502bfa7"
+					(reference "#PWR0203")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ce659e6f-eb21-41a4-985e-768b6ecc0e23"
+					(reference "#PWR0187")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/f291ef2d-c884-45c2-9a1d-801ef9814311"
+					(reference "#PWR0171")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 201.93 63.5 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "752ab2e6-e4d8-40bb-80d2-8786c8af3016")
+		(property "Reference" "SW184"
+			(at 201.93 55.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 201.93 58.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 201.93 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 201.93 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 201.93 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "7603c9a1-bbdb-42ea-a4be-58d50951206d")
+		)
+		(pin "1"
+			(uuid "3695461f-41a8-4eec-800e-3b84171e67d7")
+		)
+		(instances
+			(project "Midi_Controller_02"
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/1514501c-94c5-4d71-b612-dff59add0375"
+					(reference "SW248")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/3d540c68-eeb5-4b73-a0fa-2849d9da59f4"
+					(reference "SW232")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/7da63472-84e3-4c20-8da6-3ec9d357f47e"
+					(reference "SW152")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ae5b0fab-6902-4988-81d7-616edb40a1ac"
+					(reference "SW216")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/b50dbabf-9223-4383-8d4b-087ad146e2a2"
+					(reference "SW136")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/c11c5449-1192-4cf4-8b23-bd997502bfa7"
+					(reference "SW200")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ce659e6f-eb21-41a4-985e-768b6ecc0e23"
+					(reference "SW184")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/f291ef2d-c884-45c2-9a1d-801ef9814311"
+					(reference "SW168")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 236.22 63.5 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "75509660-5216-4ef7-bc9a-508b90f34e2b")
+		(property "Reference" "SW186"
+			(at 236.22 55.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 236.22 58.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 236.22 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 236.22 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 236.22 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "f3efd8be-7656-4b21-a7f7-224a1209a3ea")
+		)
+		(pin "1"
+			(uuid "e45abe05-9f16-46b0-9548-2244ecce10c0")
+		)
+		(instances
+			(project "Midi_Controller_02"
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/1514501c-94c5-4d71-b612-dff59add0375"
+					(reference "SW250")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/3d540c68-eeb5-4b73-a0fa-2849d9da59f4"
+					(reference "SW234")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/7da63472-84e3-4c20-8da6-3ec9d357f47e"
+					(reference "SW154")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ae5b0fab-6902-4988-81d7-616edb40a1ac"
+					(reference "SW218")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/b50dbabf-9223-4383-8d4b-087ad146e2a2"
+					(reference "SW138")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/c11c5449-1192-4cf4-8b23-bd997502bfa7"
+					(reference "SW202")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ce659e6f-eb21-41a4-985e-768b6ecc0e23"
+					(reference "SW186")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/f291ef2d-c884-45c2-9a1d-801ef9814311"
+					(reference "SW170")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 224.79 64.77 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "75642d23-d5e0-4b56-906c-2b34e39e7631")
+		(property "Reference" "#PWR0185"
+			(at 224.79 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 224.79 69.85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 224.79 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 224.79 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 224.79 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "60a36a9f-d08d-46c8-97b5-32d9f30b945f")
+		)
+		(instances
+			(project "Midi_Controller_02"
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/1514501c-94c5-4d71-b612-dff59add0375"
+					(reference "#PWR0249")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/3d540c68-eeb5-4b73-a0fa-2849d9da59f4"
+					(reference "#PWR0233")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/7da63472-84e3-4c20-8da6-3ec9d357f47e"
+					(reference "#PWR0153")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ae5b0fab-6902-4988-81d7-616edb40a1ac"
+					(reference "#PWR0217")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/b50dbabf-9223-4383-8d4b-087ad146e2a2"
+					(reference "#PWR0137")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/c11c5449-1192-4cf4-8b23-bd997502bfa7"
+					(reference "#PWR0201")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ce659e6f-eb21-41a4-985e-768b6ecc0e23"
+					(reference "#PWR0185")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/f291ef2d-c884-45c2-9a1d-801ef9814311"
+					(reference "#PWR0169")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 347.98 64.77 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7a169e75-659c-4b96-a54f-fd2aa10800b7")
+		(property "Reference" "#PWR0192"
+			(at 347.98 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 347.98 69.85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 347.98 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 347.98 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 347.98 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "610f79ad-d3de-417a-91da-195d17d178d7")
+		)
+		(instances
+			(project "Midi_Controller_02"
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/1514501c-94c5-4d71-b612-dff59add0375"
+					(reference "#PWR0256")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/3d540c68-eeb5-4b73-a0fa-2849d9da59f4"
+					(reference "#PWR0240")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/7da63472-84e3-4c20-8da6-3ec9d357f47e"
+					(reference "#PWR0160")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ae5b0fab-6902-4988-81d7-616edb40a1ac"
+					(reference "#PWR0224")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/b50dbabf-9223-4383-8d4b-087ad146e2a2"
+					(reference "#PWR0144")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/c11c5449-1192-4cf4-8b23-bd997502bfa7"
+					(reference "#PWR0208")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ce659e6f-eb21-41a4-985e-768b6ecc0e23"
+					(reference "#PWR0192")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/f291ef2d-c884-45c2-9a1d-801ef9814311"
+					(reference "#PWR0176")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 121.92 64.77 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a269a8b6-1552-4b3c-afef-02d9dfbc6fa7")
+		(property "Reference" "#PWR0179"
+			(at 121.92 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 121.92 69.85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 121.92 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 121.92 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 121.92 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e2fcce03-86f8-457d-a60d-99119d163e4b")
+		)
+		(instances
+			(project "Midi_Controller_02"
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/1514501c-94c5-4d71-b612-dff59add0375"
+					(reference "#PWR0243")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/3d540c68-eeb5-4b73-a0fa-2849d9da59f4"
+					(reference "#PWR0227")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/7da63472-84e3-4c20-8da6-3ec9d357f47e"
+					(reference "#PWR0147")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ae5b0fab-6902-4988-81d7-616edb40a1ac"
+					(reference "#PWR0211")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/b50dbabf-9223-4383-8d4b-087ad146e2a2"
+					(reference "#PWR0131")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/c11c5449-1192-4cf4-8b23-bd997502bfa7"
+					(reference "#PWR0195")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ce659e6f-eb21-41a4-985e-768b6ecc0e23"
+					(reference "#PWR0179")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/f291ef2d-c884-45c2-9a1d-801ef9814311"
+					(reference "#PWR0163")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 190.5 64.77 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b3331f07-8baf-4d83-9d6f-ec7c5c673086")
+		(property "Reference" "#PWR0183"
+			(at 190.5 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 190.5 69.85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 190.5 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 190.5 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 190.5 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "33d6869f-1a8c-4255-a48e-9f5c62153f60")
+		)
+		(instances
+			(project "Midi_Controller_02"
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/1514501c-94c5-4d71-b612-dff59add0375"
+					(reference "#PWR0247")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/3d540c68-eeb5-4b73-a0fa-2849d9da59f4"
+					(reference "#PWR0231")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/7da63472-84e3-4c20-8da6-3ec9d357f47e"
+					(reference "#PWR0151")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ae5b0fab-6902-4988-81d7-616edb40a1ac"
+					(reference "#PWR0215")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/b50dbabf-9223-4383-8d4b-087ad146e2a2"
+					(reference "#PWR0135")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/c11c5449-1192-4cf4-8b23-bd997502bfa7"
+					(reference "#PWR0199")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ce659e6f-eb21-41a4-985e-768b6ecc0e23"
+					(reference "#PWR0183")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/f291ef2d-c884-45c2-9a1d-801ef9814311"
+					(reference "#PWR0167")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 156.21 64.77 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b5bb302a-c4fa-46c0-ae2b-1d2e869c4a44")
+		(property "Reference" "#PWR0181"
+			(at 156.21 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 156.21 69.85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 156.21 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 156.21 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 156.21 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ccc0cdaf-3ca7-4682-9165-e82c9f683c75")
+		)
+		(instances
+			(project "Midi_Controller_02"
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/1514501c-94c5-4d71-b612-dff59add0375"
+					(reference "#PWR0245")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/3d540c68-eeb5-4b73-a0fa-2849d9da59f4"
+					(reference "#PWR0229")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/7da63472-84e3-4c20-8da6-3ec9d357f47e"
+					(reference "#PWR0149")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ae5b0fab-6902-4988-81d7-616edb40a1ac"
+					(reference "#PWR0213")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/b50dbabf-9223-4383-8d4b-087ad146e2a2"
+					(reference "#PWR0133")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/c11c5449-1192-4cf4-8b23-bd997502bfa7"
+					(reference "#PWR0197")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ce659e6f-eb21-41a4-985e-768b6ecc0e23"
+					(reference "#PWR0181")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/f291ef2d-c884-45c2-9a1d-801ef9814311"
+					(reference "#PWR0165")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 82.55 62.23 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c0236e93-6d3e-4ad8-a63f-38e877cd7bda")
+		(property "Reference" "SW177"
+			(at 82.55 54.61 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 82.55 57.15 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 82.55 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 82.55 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 82.55 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "9d945c15-a965-4639-b842-f3e6d3141c37")
+		)
+		(pin "1"
+			(uuid "3bf0aa12-3754-4ae0-bbdc-b151ef020c8f")
+		)
+		(instances
+			(project "Midi_Controller_02"
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/1514501c-94c5-4d71-b612-dff59add0375"
+					(reference "SW241")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/3d540c68-eeb5-4b73-a0fa-2849d9da59f4"
+					(reference "SW225")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/7da63472-84e3-4c20-8da6-3ec9d357f47e"
+					(reference "SW145")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ae5b0fab-6902-4988-81d7-616edb40a1ac"
+					(reference "SW209")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/b50dbabf-9223-4383-8d4b-087ad146e2a2"
+					(reference "SW129")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/c11c5449-1192-4cf4-8b23-bd997502bfa7"
+					(reference "SW193")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ce659e6f-eb21-41a4-985e-768b6ecc0e23"
+					(reference "SW177")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/f291ef2d-c884-45c2-9a1d-801ef9814311"
+					(reference "SW161")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 116.84 63.5 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c223ff12-e9b0-483f-900c-156d0c7a0f44")
+		(property "Reference" "SW179"
+			(at 116.84 55.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 116.84 58.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 116.84 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 116.84 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 116.84 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "69f6ffd2-a793-490a-b17f-1ab561e27e77")
+		)
+		(pin "1"
+			(uuid "6333ac92-18d9-4fb1-8a20-29b077966a86")
+		)
+		(instances
+			(project "Midi_Controller_02"
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/1514501c-94c5-4d71-b612-dff59add0375"
+					(reference "SW243")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/3d540c68-eeb5-4b73-a0fa-2849d9da59f4"
+					(reference "SW227")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/7da63472-84e3-4c20-8da6-3ec9d357f47e"
+					(reference "SW147")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ae5b0fab-6902-4988-81d7-616edb40a1ac"
+					(reference "SW211")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/b50dbabf-9223-4383-8d4b-087ad146e2a2"
+					(reference "SW131")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/c11c5449-1192-4cf4-8b23-bd997502bfa7"
+					(reference "SW195")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ce659e6f-eb21-41a4-985e-768b6ecc0e23"
+					(reference "SW179")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/f291ef2d-c884-45c2-9a1d-801ef9814311"
+					(reference "SW163")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 104.14 63.5 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ca6dc3d8-0305-4c50-b514-b359a7c2f85a")
+		(property "Reference" "#PWR0178"
+			(at 104.14 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 104.14 68.58 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 104.14 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 104.14 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 104.14 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7dc0d610-8b70-4b4c-8bcd-d3e9f12fb7cc")
+		)
+		(instances
+			(project "Midi_Controller_02"
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/1514501c-94c5-4d71-b612-dff59add0375"
+					(reference "#PWR0242")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/3d540c68-eeb5-4b73-a0fa-2849d9da59f4"
+					(reference "#PWR0226")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/7da63472-84e3-4c20-8da6-3ec9d357f47e"
+					(reference "#PWR0146")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ae5b0fab-6902-4988-81d7-616edb40a1ac"
+					(reference "#PWR0210")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/b50dbabf-9223-4383-8d4b-087ad146e2a2"
+					(reference "#PWR0130")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/c11c5449-1192-4cf4-8b23-bd997502bfa7"
+					(reference "#PWR0194")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ce659e6f-eb21-41a4-985e-768b6ecc0e23"
+					(reference "#PWR0178")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/f291ef2d-c884-45c2-9a1d-801ef9814311"
+					(reference "#PWR0162")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 167.64 63.5 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cd7c68d0-b8cf-423a-b263-91aeefe4e7a9")
+		(property "Reference" "SW182"
+			(at 167.64 55.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 167.64 58.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 167.64 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 167.64 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 167.64 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "2c1874cc-5dbc-43ec-9fce-70ca9382b605")
+		)
+		(pin "1"
+			(uuid "34ac6472-81a0-4f4f-b474-afc941a1eacb")
+		)
+		(instances
+			(project "Midi_Controller_02"
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/1514501c-94c5-4d71-b612-dff59add0375"
+					(reference "SW246")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/3d540c68-eeb5-4b73-a0fa-2849d9da59f4"
+					(reference "SW230")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/7da63472-84e3-4c20-8da6-3ec9d357f47e"
+					(reference "SW150")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ae5b0fab-6902-4988-81d7-616edb40a1ac"
+					(reference "SW214")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/b50dbabf-9223-4383-8d4b-087ad146e2a2"
+					(reference "SW134")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/c11c5449-1192-4cf4-8b23-bd997502bfa7"
+					(reference "SW198")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ce659e6f-eb21-41a4-985e-768b6ecc0e23"
+					(reference "SW182")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/f291ef2d-c884-45c2-9a1d-801ef9814311"
+					(reference "SW166")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 87.63 63.5 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cdde4286-ef01-48e5-a143-832f7ccf55a6")
+		(property "Reference" "#PWR0177"
+			(at 87.63 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 87.63 68.58 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 87.63 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 87.63 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 87.63 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a5b8d00d-45c8-4375-b3d5-890047364cac")
+		)
+		(instances
+			(project "Midi_Controller_02"
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/1514501c-94c5-4d71-b612-dff59add0375"
+					(reference "#PWR0241")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/3d540c68-eeb5-4b73-a0fa-2849d9da59f4"
+					(reference "#PWR0225")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/7da63472-84e3-4c20-8da6-3ec9d357f47e"
+					(reference "#PWR0145")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ae5b0fab-6902-4988-81d7-616edb40a1ac"
+					(reference "#PWR0209")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/b50dbabf-9223-4383-8d4b-087ad146e2a2"
+					(reference "#PWR0129")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/c11c5449-1192-4cf4-8b23-bd997502bfa7"
+					(reference "#PWR0193")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ce659e6f-eb21-41a4-985e-768b6ecc0e23"
+					(reference "#PWR0177")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/f291ef2d-c884-45c2-9a1d-801ef9814311"
+					(reference "#PWR0161")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 151.13 63.5 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "dcbb2e7c-c817-48c0-a6b3-13522cd4c7bc")
+		(property "Reference" "SW181"
+			(at 151.13 55.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 151.13 58.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 151.13 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 151.13 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 151.13 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "bf952231-88a3-438e-862d-4fc4a0d56289")
+		)
+		(pin "1"
+			(uuid "48e927e5-8660-4afd-8f7b-18550ad49dfb")
+		)
+		(instances
+			(project "Midi_Controller_02"
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/1514501c-94c5-4d71-b612-dff59add0375"
+					(reference "SW245")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/3d540c68-eeb5-4b73-a0fa-2849d9da59f4"
+					(reference "SW229")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/7da63472-84e3-4c20-8da6-3ec9d357f47e"
+					(reference "SW149")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ae5b0fab-6902-4988-81d7-616edb40a1ac"
+					(reference "SW213")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/b50dbabf-9223-4383-8d4b-087ad146e2a2"
+					(reference "SW133")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/c11c5449-1192-4cf4-8b23-bd997502bfa7"
+					(reference "SW197")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ce659e6f-eb21-41a4-985e-768b6ecc0e23"
+					(reference "SW181")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/f291ef2d-c884-45c2-9a1d-801ef9814311"
+					(reference "SW165")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 330.2 64.77 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "dd8330fd-b4f6-4b6d-b484-af8532feaa91")
+		(property "Reference" "#PWR0191"
+			(at 330.2 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 330.2 69.85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 330.2 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 330.2 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 330.2 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "66d1645e-059c-40d1-a84b-6c98f493d2de")
+		)
+		(instances
+			(project "Midi_Controller_02"
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/1514501c-94c5-4d71-b612-dff59add0375"
+					(reference "#PWR0255")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/3d540c68-eeb5-4b73-a0fa-2849d9da59f4"
+					(reference "#PWR0239")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/7da63472-84e3-4c20-8da6-3ec9d357f47e"
+					(reference "#PWR0159")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ae5b0fab-6902-4988-81d7-616edb40a1ac"
+					(reference "#PWR0223")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/b50dbabf-9223-4383-8d4b-087ad146e2a2"
+					(reference "#PWR0143")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/c11c5449-1192-4cf4-8b23-bd997502bfa7"
+					(reference "#PWR0207")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ce659e6f-eb21-41a4-985e-768b6ecc0e23"
+					(reference "#PWR0191")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/f291ef2d-c884-45c2-9a1d-801ef9814311"
+					(reference "#PWR0175")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 133.35 63.5 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "de396f3c-886f-4762-a9c6-6d6be3f6f3bb")
+		(property "Reference" "SW180"
+			(at 133.35 55.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 133.35 58.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 133.35 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 133.35 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 133.35 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "a8fbcaa1-3d09-4550-8dde-f0d9c9682f18")
+		)
+		(pin "1"
+			(uuid "e3922b29-8d33-4c53-981c-235ef54c0d88")
+		)
+		(instances
+			(project "Midi_Controller_02"
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/1514501c-94c5-4d71-b612-dff59add0375"
+					(reference "SW244")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/3d540c68-eeb5-4b73-a0fa-2849d9da59f4"
+					(reference "SW228")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/7da63472-84e3-4c20-8da6-3ec9d357f47e"
+					(reference "SW148")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ae5b0fab-6902-4988-81d7-616edb40a1ac"
+					(reference "SW212")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/b50dbabf-9223-4383-8d4b-087ad146e2a2"
+					(reference "SW132")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/c11c5449-1192-4cf4-8b23-bd997502bfa7"
+					(reference "SW196")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/ce659e6f-eb21-41a4-985e-768b6ecc0e23"
+					(reference "SW180")
+					(unit 1)
+				)
+				(path "/afe09879-a3a1-4684-a2b4-5d496b9fd2b1/f291ef2d-c884-45c2-9a1d-801ef9814311"
+					(reference "SW164")
+					(unit 1)
+				)
+			)
+		)
+	)
+)

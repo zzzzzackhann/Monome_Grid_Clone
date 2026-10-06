@@ -1,0 +1,9 @@
+*.elf
+*.bin
+*.hex
+*.o
+*.sr
+*.pvs
+Midi_Controller_02.2/
+Midi_Controller_02.3/
+*backups*/
