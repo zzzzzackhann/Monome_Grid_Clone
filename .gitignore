@@ -4,6 +4,7 @@
 *.o
 *.sr
 *.pvs
-Midi_Controller_02.2/
-Midi_Controller_02.3/
+*abandoned*/
 *backups*/
+ISP_programmer/
+*.DS_Store*/
