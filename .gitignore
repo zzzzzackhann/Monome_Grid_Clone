@@ -1,3 +1,7 @@
+# *secret*          # any file or directory with "secret" anywhere in its name
+# *secret*.log      # only .log files with "secret" in the name
+# **/*secret*/      # only directories with "secret" in the name
+
 *.elf
 *.bin
 *.hex
@@ -7,4 +11,5 @@
 *abandoned*/
 *backups*/
 ISP_programmer/
-*.DS_Store*/
+*.DS_Store*
+Adafruit_Trellis/

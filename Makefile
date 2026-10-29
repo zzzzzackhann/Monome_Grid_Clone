@@ -1,21 +1,25 @@
-TARGET = heartbeat
+TARGET       = hello_serial
 
-MCU = atmega328pb
-F_CPU = 16000000UL
-PORT = /dev/tty.usbserial-210
-BAUD = 115200
+# avr-gcc name: the installed headers don't know the 328PB, so compile as a 328P
+MCU          = atmega328p
+# avrdude name: the chip actually on the board (needed for the signature check)
+AVRDUDE_PART = m328pb
+F_CPU        = 16000000UL
+
+# These are actions, not files
+.PHONY: all flash clean
+
+# First rule = default, so plain `make` builds the hex
+all: $(TARGET).hex
 
 $(TARGET).elf: $(TARGET).c
-	avr-gcc -mmcu=$(MCU) -DF_CPU=$(F_CPU) -Os -o $(TARGET).elf $(TARGET).c
+	avr-gcc -mmcu=$(MCU) -DF_CPU=$(F_CPU) -Os -o $@ $<
 
 $(TARGET).hex: $(TARGET).elf
-	avr-objcopy -O ihex -R .eeprom $(TARGET).elf $(TARGET).hex
+	avr-objcopy -O ihex -R .eeprom $< $@
 
-# flash: $(TARGET).hex
-# 	avrdude -c arduino -p $(MCU) -P $(PORT) -b $(BAUD) -U flash:w:$(TARGET).hex
-
-flash: heartbeat.hex
-	avrdude -c usbasp -p m328pb -B 125kHz -U flash:w:heartbeat.hex:i
+flash: $(TARGET).hex
+	avrdude -c usbasp -p $(AVRDUDE_PART) -B 125kHz -U flash:w:$<:i
 
 clean:
 	rm -f $(TARGET).elf $(TARGET).hex
