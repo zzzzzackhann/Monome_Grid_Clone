@@ -12,4 +12,4 @@
 *backups*/
 ISP_programmer/
 *.DS_Store*
-Adafruit_Trellis/
+*Adafruit_Trellis*

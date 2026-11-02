@@ -1,4 +1,4 @@
-TARGET       = hello_serial
+TARGET       = osc-test
 
 # avr-gcc name: the installed headers don't know the 328PB, so compile as a 328P
 MCU          = atmega328p
@@ -13,7 +13,7 @@ F_CPU        = 16000000UL
 all: $(TARGET).hex
 
 $(TARGET).elf: $(TARGET).c
-	avr-gcc -mmcu=$(MCU) -DF_CPU=$(F_CPU) -Os -o $@ $<
+	avr-gcc -mmcu=$(MCU) -DF_CPU=$(F_CPU) -Os -o $@ $< #DF_CPU stands for #DEFINE F_CPU
 
 $(TARGET).hex: $(TARGET).elf
 	avr-objcopy -O ihex -R .eeprom $< $@
