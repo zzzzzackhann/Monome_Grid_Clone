@@ -1,6 +1,6 @@
 /* On 328PB, RX is PD0 and TX and PD1 */
 /* This is a test that stores data (chars) in a buffer of limited size (a ring buffer),
-reads each byte and sends it back to the computer over uart. */
+reads each byte and sends it back to the computer over uart. 
 them one by one*/
 
 #include <avr/io.h> // for registers
@@ -9,6 +9,7 @@ them one by one*/
 no interrupt can fire while that code executes */
 #include <util/atomic.h> 
 #include <stdint.h>
+
 
 #ifndef F_CPU
 #define F_CPU 16000000UL
@@ -53,7 +54,7 @@ typedef struct {
     uint8_t data[RX_BUFFER_SIZE];
     uint8_t read; 
     uint8_t write; 
-    int8_t count;
+    uint8_t count;
 } ring_buffer;
 
 /* This is being read by the ISR, meanning it can change behind the compiler's back. 
@@ -97,6 +98,8 @@ int main(void) {
         //if the buffer has anything in it, read from it and send it over UART until it no longer has anything
         if(uart_rx_buff.count > 0) { 
             uart_send(read_from__ring_buffer(&uart_rx_buff));
+            uart_send('\n');
+            uart_send('\r');
         }
     }
 }

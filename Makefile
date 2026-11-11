@@ -6,12 +6,17 @@ MCU          = atmega328p
 AVRDUDE_PART = m328pb
 F_CPU        = 16000000UL
 
-# These are actions, not files
+# tells the system that these are actions, not files
+#it usually wouldn't matter because even if it thought it was a file,
+#it would just look up the file, determine it doesn't exist, and then rung
+#recipe anyway. 
+
 .PHONY: all flash clean
 
 # First rule = default, so plain `make` builds the hex
-all: $(TARGET).hex
+all: $(TARGET).hex 
 
+# $@ is the shorthard for target, $< is the shorthand for prerequisite
 $(TARGET).elf: $(TARGET).c
 	avr-gcc -mmcu=$(MCU) -DF_CPU=$(F_CPU) -Os -o $@ $< #DF_CPU stands for #DEFINE F_CPU
 
