@@ -1,5 +1,7 @@
 /* On 328PB, RX is PD0 and TX and PD1 */
-
+/* This is a test that stores data (chars) in a buffer of limited size (a ring buffer),
+reads each byte and sends it back to the computer over uart. */
+them one by one*/
 
 #include <avr/io.h> // for registers
 #include <avr/interrupt.h>
@@ -12,11 +14,15 @@ no interrupt can fire while that code executes */
 #define F_CPU 16000000UL
 #endif 
 
+#define DEBUG 0
+#define RX_BUFFER_SIZE 8
+
 #define BAUD 115200UL
-/* UBBR = F_CPU / (16 * BAUD) - 1 */
-#define UBBR_VAL ((F_CPU / (16UL * BAUD)) - 1)
+/* UBBR = F_CPU / (8 * BAUD) - 1 */
+#define UBBR_VAL ((F_CPU / (8UL * BAUD)) - 1)
 
 /* _____________________________________________________ */
+
 
 /* the static on this isn't stricly necessary but is a good practice for saving memory. 
 it means these functions are only callable from this module and can't be linked to other modules. */
@@ -33,7 +39,7 @@ static void uart_send (uint8_t c) {
     UDR0 = c;
 }
 
-static void usart_receive(void) {
+static uint8_t usart_receive(void) {
     /* Wait for data to be received */
     while ( !(UCSR0A & (1 << RXC0)) );
 
@@ -42,40 +48,55 @@ static void usart_receive(void) {
 }
 
 /* Change the data type to whatever you need, both here and in the read/write functions*/
+
 typedef struct {
-    int data[8];
-    int read;
-    int write;
-    int count;
+    uint8_t data[RX_BUFFER_SIZE];
+    uint8_t read; 
+    uint8_t write; 
+    int8_t count;
 } ring_buffer;
 
-static void write_to_ring_buffer(ring_buffer* buff, float value) {
-    buff->data[buff->write] = value;
-    buff->write = (buff->write + 1) % 8;
-    buff->count++;
+/* This is being read by the ISR, meanning it can change behind the compiler's back. 
+ Volatile says to reread it everything time. */
+static volatile ring_buffer uart_rx_buff;
+
+static void write_to_ring_buffer(volatile ring_buffer* buff, uint8_t value) {
+    if(buff->count < RX_BUFFER_SIZE) { // if the buffer isn't full (all 8 slots taken) (it needs to be 1-index because 0 data means the count is actually 0)
+        buff->data[buff->write] = value;
+        buff->write = (buff->write + 1) % RX_BUFFER_SIZE;
+        buff->count++;
+    } else {
+        #if DEBUG
+
+        #endif
+    }
 }
 
-static int read_from__ring_buffer(ring_buffer* buff) {
-    int value;
-    value = buff->data[buff->read];
-    buff->read = (buff->read + 1) % 8;
-    buff->count--;
+static uint8_t read_from__ring_buffer(volatile ring_buffer* buff) {
+    uint8_t value;
 
+    value = buff->data[buff->read];
+    buff->read = (buff->read + 1) % RX_BUFFER_SIZE;
+    /* count is also changed by the RX ISR; keep its read-modify-write from being split */
+    ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
+        buff->count--;
+    }
     return value;
 }
 
 /* UART RX interrupt service routine */
-ISR(USART0_RX) {
-    write_to_ring_buffer(&buff, (char) value);
+ISR(USART_RX_vect) {
+    write_to_ring_buffer(&uart_rx_buff, UDR0);
 }
 
-
-
-
 int main(void) {
+    uart_init(); // enable uart
     sei(); // enable global interrupts. cli() disables them
-    uart_init();
-
-
-
+    
+    while(1) {
+        //if the buffer has anything in it, read from it and send it over UART until it no longer has anything
+        if(uart_rx_buff.count > 0) { 
+            uart_send(read_from__ring_buffer(&uart_rx_buff));
+        }
+    }
 }
