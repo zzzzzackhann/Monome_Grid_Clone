@@ -1,4 +1,4 @@
-TARGET       = osc-test
+TARGET       = mext-program
 
 # avr-gcc name: the installed headers don't know the 328PB, so compile as a 328P
 MCU          = atmega328p
