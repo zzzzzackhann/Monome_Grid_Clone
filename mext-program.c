@@ -10,7 +10,7 @@ them one by one*/
 #endif 
 
 #define DEBUG 0
-#define RX_BUFFER_SIZE 8
+#define RX_BUFFER_SIZE 128
 
 #define BAUD 115200UL
 /* UBBR = F_CPU / (8 * BAUD) - 1 */
@@ -253,50 +253,294 @@ static uint8_t is31_init(void) {
     return is31_write(IS31_PAGE_FUNCTION, IS31_REG_SHUTDOWN, 0x01);
 }
 
+#define DEMUX_A0 PD4
+#define DEMUX_A1 PD5
+#define DEMUX_A2 PD6
+#define DEMUX_A3 PD7
+#define DEMUX_MASK ((1 << DEMUX_A0) | (1 << DEMUX_A1) | (1 << DEMUX_A2) | (1 << DEMUX_A3))
+
+#define ROWS_C_MASK ((1 << PC0) | (1 << PC1) | (1 << PC2) | (1 << PC3) | (1 << PC4) | (1 << PC5))
+#define ROWS_D_MASK ((1 << PD2) | (1 << PD3))
+
+#define GRID_COLS 16
+#define GRID_ROWS 8
+#define KEY_SCAN_MS 5
+
+static volatile uint32_t ms_ticks = 0;
+
 /* Button demux is on pins PD4, PD5, PD6, and PD7 */
 static void demux_init(void) {
-    DDRD |= ((1 << PD4) | (1 << PD5) | (1 << PD6) | (1 << PD7));
+    DDRD |= DEMUX_MASK; // set 4 demux pins (A0-A3) as ouputs, default driven low
+    
+    DDRD &= ~ROWS_D_MASK; //turn PD2 and PD3 into inputs for Row 6 and Row 7 
+    PORTD |= ROWS_D_MASK; // pull input pins high with internal pullup resistor
+    DDRC &= ~ROWS_C_MASK; // input pins from Rows 0-5
+    PORTC |= ((1 << PC0) | (1 << PC1) | (1 << PC2) | (1 << PC3) | (1 << PC4) | (1 << PC5)); // set pull up resistor
+}
 
+/* This is a sick technique for scanning through a fixed value in the registers*/
+/* While row 1 is being held high by pull up resistors, the columns cycle through all of them.
+If during any column check the pin goes low, it's because the button is pressed. */
+static void demux_select(uint8_t column) {
+    uint8_t d = PORTD & ~DEMUX_MASK; // keeps low four bits as they are and CLEARS four demux address bits (PD4-7)
+
+    if (column & 0x01) d |= (1 << DEMUX_A0); // is bit 0 of the column number set? (true for columns 1, 3, 5 etc. )
+    if (column & 0x02) d |= (1 << DEMUX_A1);
+    if (column & 0x04) d |= (1 << DEMUX_A2);
+    if (column & 0x08) d |= (1 << DEMUX_A3);
+
+    PORTD = d;
+}
+
+static uint8_t read_rows(void) {
+    return (PINC & ROWS_C_MASK) | ((PIND & ROWS_D_MASK) << 4);
+}
+
+static uint8_t button_state[GRID_COLS * GRID_ROWS];
+
+static void demux_scan(void) {
+    for (uint8_t column = 0; column < GRID_COLS; column++) {
+        demux_select(column);
+        _delay_us(5); // give the electrical reading time to settle
+        uint8_t rows = read_rows();
+
+        for (uint8_t row = 0; row < GRID_ROWS; row++) {
+            uint8_t pressed = !(rows & (1 << row));
+            uint8_t i = row * GRID_COLS + column;
+
+            /* If the current state of the button is different than the previosuly stored state, send the messages to change the state*/
+            if (pressed != button_state[i]) {
+                button_state[i] = pressed;
+                uart_send(pressed ? 0x21 : 0x20);
+                uart_send(column);
+                uart_send(row);
+            }
+        }
+    }
 }
 
 
-int main(void) {
-    uart_init(); // enable uart
-    sei(); // enable global interrupts. cli() disables them
-    i2c_init();
-    is31_init();
-    is31_set_all(50);
-    is31_update();
-    
-    while(1) {
-        if(rx_buff.count > 0) { // only loop through the following things if there's anything in the rx_buff
-            uint8_t serialosc_query = read_from_ring_buffer(&rx_buff); //read once from the ring buffer
-            const char *name = "zacks monome grid";
+#define MEXT_MAX_PAYLOAD 34
+#define LED_REFRESH_MS 20
 
-            switch(serialosc_query) {
-            case 0x00: //serialosc asking "what do you have?"
-                /* answer */
-                uart_send(0x00); // op code to answer this query
-                uart_send(0x01); // index 1: "led-grid"
-                uart_send(0x01); // 1 of them
-                break;
-            case 0x01: //serial osc asking "what's your name?"
-                uart_send(0x01); // opcode to respond to this query
-                for (uint8_t i = 0; i < 32; i++) {
-                    if(*name) {
-                        uart_send(*name);
-                        name++;
-                    } else {
-                        uart_send(0); //pad the name with zeros as it must be 32 bytes
-                    }
-                }
-                break;
-            case 0x05: // how big is your grid? 
-                uart_send(0x03); // opcode to reply
-                uart_send(0x10); // num of columns (16 in hex)
-                uart_send(0x08); // num of rows (8)
-                break;
+ISR(TIMER0_COMPA_vect) {
+    ms_ticks++;
+}
+
+static void timer0_init(void) {
+    TCCR0A = (1 << WGM01);
+    TCCR0B = (1 << CS01) | (1 << CS00);
+    OCR0A  = 249;
+    TIMSK0 = (1 << OCIE0A);
+}
+
+static uint32_t millis(void) {
+    uint32_t t;
+    ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
+        t = ms_ticks;
+    }
+    return t;
+}
+
+static uint8_t grid_level[GRID_COLS * GRID_ROWS];
+static uint8_t grid_intensity = 15;
+static uint8_t leds_dirty;
+
+static uint8_t led_index(uint8_t x, uint8_t y) {
+    return y * GRID_COLS + x;
+}
+
+static void leds_render(void) {
+    for (uint8_t y = 0; y < GRID_ROWS; y++) {
+        for (uint8_t x = 0; x < GRID_COLS; x++) {
+            uint16_t level = grid_level[y * GRID_COLS + x];
+            led_pwm[led_index(x, y)] = (level * 17 * (grid_intensity + 1)) >> 4;
+        }
+    }
+    is31_update();
+}
+
+static void set_level(uint8_t x, uint8_t y, uint8_t level) {
+    if (x < GRID_COLS && y < GRID_ROWS) {
+        if (level > 15) level = 15;
+        grid_level[y * GRID_COLS + x] = level;
+        leds_dirty = 1;
+    }
+}
+
+static void set_all(uint8_t level) {
+    for (uint8_t y = 0; y < GRID_ROWS; y++) {
+        for (uint8_t x = 0; x < GRID_COLS; x++) {
+            set_level(x, y, level);
+        }
+    }
+}
+
+static uint8_t nibble(const uint8_t *packed, uint8_t n) {
+    uint8_t b = packed[n / 2];
+    return (n & 1) ? (b & 0x0F) : (b >> 4);
+}
+
+static void mext_send_id(void) {
+    const char *name = "zacks monome grid";
+
+    uart_send(0x01);
+    for (uint8_t i = 0; i < 32; i++) {
+        if (*name) {
+            uart_send(*name);
+            name++;
+        } else {
+            uart_send(0);
+        }
+    }
+}
+
+static uint8_t mext_payload_length(uint8_t cmd) {
+    switch (cmd) {
+    case 0x02: return 32;
+    case 0x04: return 3;
+    case 0x06: return 2;
+    case 0x08: return 2;
+    case 0x10: return 2;
+    case 0x11: return 2;
+    case 0x14: return 10;
+    case 0x15: return 3;
+    case 0x16: return 3;
+    case 0x17: return 1;
+    case 0x18: return 3;
+    case 0x19: return 1;
+    case 0x1A: return 34;
+    case 0x1B: return 6;
+    case 0x1C: return 6;
+    default:   return 0;
+    }
+}
+
+static void mext_handle(uint8_t cmd, const uint8_t *p) {
+    uint8_t x = p[0];
+    uint8_t y = p[1];
+
+    switch (cmd) {
+    case 0x00:
+        uart_send(0x00);
+        uart_send(0x01);
+        uart_send(0x01);
+        break;
+    case 0x01:
+        mext_send_id();
+        break;
+    case 0x05:
+        uart_send(0x03);
+        uart_send(GRID_COLS);
+        uart_send(GRID_ROWS);
+        break;
+    case 0x10:
+        set_level(x, y, 0);
+        break;
+    case 0x11:
+        set_level(x, y, 15);
+        break;
+    case 0x12:
+        set_all(0);
+        break;
+    case 0x13:
+        set_all(15);
+        break;
+    case 0x14:
+        for (uint8_t r = 0; r < 8; r++) {
+            for (uint8_t c = 0; c < 8; c++) {
+                set_level(x + c, y + r, (p[2 + r] & (1 << c)) ? 15 : 0);
             }
+        }
+        break;
+    case 0x15:
+        for (uint8_t c = 0; c < 8; c++) {
+            set_level(x + c, y, (p[2] & (1 << c)) ? 15 : 0);
+        }
+        break;
+    case 0x16:
+        for (uint8_t r = 0; r < 8; r++) {
+            set_level(x, y + r, (p[2] & (1 << r)) ? 15 : 0);
+        }
+        break;
+    case 0x17:
+        grid_intensity = p[0] & 0x0F;
+        leds_dirty = 1;
+        break;
+    case 0x18:
+        set_level(x, y, p[2]);
+        break;
+    case 0x19:
+        set_all(p[0]);
+        break;
+    case 0x1A:
+        for (uint8_t n = 0; n < 64; n++) {
+            set_level(x + (n % 8), y + (n / 8), nibble(&p[2], n));
+        }
+        break;
+    case 0x1B:
+        for (uint8_t n = 0; n < 8; n++) {
+            set_level(x + n, y, nibble(&p[2], n));
+        }
+        break;
+    case 0x1C:
+        for (uint8_t n = 0; n < 8; n++) {
+            set_level(x, y + n, nibble(&p[2], n));
+        }
+        break;
+    }
+}
+
+static uint8_t mext_cmd;
+static uint8_t mext_len;
+static uint8_t mext_pos;
+static uint8_t mext_busy;
+static uint8_t mext_payload[MEXT_MAX_PAYLOAD];
+
+static void mext_receive(uint8_t byte) {
+    if (!mext_busy) {
+        mext_cmd = byte;
+        mext_len = mext_payload_length(byte);
+        mext_pos = 0;
+        mext_busy = 1;
+    } else {
+        mext_payload[mext_pos++] = byte;
+    }
+
+    if (mext_pos == mext_len) {
+        mext_busy = 0;
+        mext_handle(mext_cmd, mext_payload);
+    }
+}
+
+int main(void) {
+    uart_init();
+    timer0_init();
+    i2c_init();
+    demux_init();
+    sei();
+
+    is31_init();
+
+    uint32_t last_scan = 0;
+    uint32_t last_led = 0;
+
+    while (1) {
+        while (rx_buff.count > 0) {
+            mext_receive(read_from_ring_buffer(&rx_buff));
+        }
+
+        uint32_t now = millis();
+
+        if ((now - last_scan) >= KEY_SCAN_MS) {
+            last_scan = now;
+            demux_scan();
+        }
+
+        if (leds_dirty && (now - last_led) >= LED_REFRESH_MS) {
+            last_led = now;
+            leds_dirty = 0;
+            leds_render();
         }
     }
 }
